@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "df128213-1462-45d3-b2ae-fee92a583c84",
+		"name": "ParkingLotAPIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAvailableSlots",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/available-slots?type=car",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"available-slots"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "car"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BookASlot",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"vahicle_no\" : \"KA564625\",\r\n    \"vahicle_type\" : \"car\",\r\n    \"slot_no\" : 20\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/bookslot",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"bookslot"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CalculateCost",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/calculate?v_no=KA156478",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"calculate"
+					],
+					"query": [
+						{
+							"key": "v_no",
+							"value": "KA156478"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeAllocateVahicle",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/deallocate?v_no=KA564625",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"deallocate"
+					],
+					"query": [
+						{
+							"key": "v_no",
+							"value": "KA564625"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
